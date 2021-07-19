@@ -5,3 +5,4 @@ env/
 *.pyc
 /Spotify Flask App Example/
 /Spotify_Organizer_Command_Line/
+Spotify_Django/Spotify_Django/Django_Secret.py
