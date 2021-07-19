@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <h1>Recently Played</h1>
+
+
+
+    <table class="table table-striped" border=1>
+        <tr>
+            <th>Artists</th>
+            <th>Album</th>
+            <th>Song Title</th>
+
+        </tr>
+
+        {% for i in recently_played %}
+            <tr>
+                <td>
+                    {% for art in i.track.artists %}
+                        {{ art.name }}
+                    {% endfor %}
+                </td>
+                <td>{{ i.track.album.name }}</td>
+                <td>{{ i.track.name }}</td>
+            </tr>
+        {% endfor %}
+
+    </table>
+
+{% endblock content %}

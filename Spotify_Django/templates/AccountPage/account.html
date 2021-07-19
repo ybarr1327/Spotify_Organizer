@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+{% block content %}
+    <br><br>
+    <h1>My Account</h1> <br>
+    <h6> You are logged in as {{ ME.id }} with Spotify</h6> <br> <br>
+
+
+    <div class="row">
+
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">View Your Top Artists</h5>
+
+                    <form method="get" id="top_artists_form" action="{% url 'top_artists' %}">
+                        <label for="num_top_artists">How Many?</label>
+                        <select id="num_top_artists" name="num_top_artists">
+                            <optgroup>
+                                <option value="5">5</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                            </optgroup>
+                        </select>
+                        <br>
+                        <label for="time_range_top_artists">Time Range?</label>
+                        <select id="time_range_top_artists" , name="time_range_top_artists">
+                            <optgroup>
+                                <option value="short_term">Last Month</option>
+                                <option value="medium_term">Last 6 Months</option>
+                                <option value="long_term">All Time</option>
+                            </optgroup>
+                        </select>
+                        <br><br>
+                        <button type="submit" class="btn btn-secondary" id="get_top_artists">Go</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">View Your Top Tracks</h5>
+
+                    <form method="get" id="top_tracks_form" action="{% url 'top_tracks' %}">
+                        <label for="num_top_tracks">How Many?</label>
+                        <select id="num_top_tracks" name="num_top_tracks">
+                            <optgroup>
+                                <option value="5">5</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                            </optgroup>
+                        </select>
+                        <br>
+                        <label for="time_range_top_tracks">Time Range?</label>
+                        <select id="time_range_top_tracks" , name="time_range_top_tracks">
+                            <optgroup>
+                                <option value="short_term">Last Month</option>
+                                <option value="medium_term">Last 6 Months</option>
+                                <option value="long_term">All Time</option>
+                            </optgroup>
+                        </select>
+                        <br><br>
+                        <button type="submit" class="btn btn-secondary" id="get_top_tracks">Go</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <br>
+
+    <div class="row">
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">View Your Saved Albums</h5>
+
+
+                <form method="get" id="saved_albums_form" action="{% url 'saved_albums' %}">
+                    <label for="sorted_by">Sorted By?</label>
+                    <select id="sorted_by" name="sorted_by">
+                        <optgroup>
+                            <option value="album_name">Album Name</option>
+                            <option value="creator">Creator</option>
+                            <option value="recently_added">Recently Added</option>
+                        </optgroup>
+                    </select>
+                    <button type="submit" class="btn btn-secondary" id="saved_albums_btn">Go</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">View Your Saved Tracks</h5>
+
+
+                <form method="get" id="saved_tracks_form" action="{% url 'saved_tracks' %}">
+                    <label for="sorted_by">Sorted By?</label>
+                    <select id="sorted_by" name="sorted_by">
+                        <optgroup>
+                            <option value="track_name">Track Name</option>
+                            <option value="creator">Creator</option>
+                            <option value="recently_added">Recently Added</option>
+                            <option value="album_name">Album Name</option>
+                        </optgroup>
+                    </select>
+                    <button type="submit" class="btn btn-secondary" id="saved_tracks_btn">Go</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">View Your Recently Played</h5>
+                <p class="card-text">View the last 50 songs you have played</p>
+                <a href="{% url 'recently_played' %}" class="btn btn-secondary">GO</a>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Sign Out</h5>
+                <a href="{% url 'sign_out' %}" class="btn btn-secondary">GO</a>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+{% endblock content %}

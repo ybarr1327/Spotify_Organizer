@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <script language="JavaScript">
+        function toggle(source) {
+            var checkboxes = document.querySelectorAll('input[name="track_cb"]');
+            for (var i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i] != source)
+                    checkboxes[i].checked = source.checked;
+            }
+        }
+    </script>
+
+
+
+
+    <h1>Saved Tracks</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        <h6>
+            <button type="submit" name="delete_selected_tracks_btn" class="btn btn-dark btn-sm">Delete Selected Tracks
+            </button>
+
+        </h6>
+
+        <table class="table table-striped" border=1>
+
+
+            <tr>
+                <th><input type="checkbox" onclick="toggle(this);"></th>
+                <th>#</th>
+                <th>Track Name</th>
+                <th>Album Name</th>
+                <th>Creator</th>
+
+            </tr>
+
+            {% for i in all_tracks %}
+                <tr>
+                    <td><input type="checkbox" name="track_cb" value={{ i.track_id }}></td>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ i.track_name }}</td>
+                    <td>{{ i.album_name }}</td>
+                    <td>{{ i.creator }}</td>
+                </tr>
+            {% endfor %}
+
+        </table>
+
+{#    </form>#}
+
+
+{% endblock content %}

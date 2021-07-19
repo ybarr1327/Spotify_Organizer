@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <h1>Top Artists</h1>
+
+ <table class= "table table-striped" border =1>
+            <tr>
+                <th>Ranking</th>
+                <th>Artist Name</th>
+            </tr>
+
+            {% for i in top_artists %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{i.name}}</td>
+                </tr>
+            {% endfor %}
+
+        </table>
+
+{% endblock content %}

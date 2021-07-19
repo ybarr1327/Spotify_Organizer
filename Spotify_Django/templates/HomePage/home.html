@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% block content %}
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+
+    <body style="background-color: #979696;">
+    <h1 style="text-align: center; font-size: 100px; font-family: 'Dancing Script', cursive;">
+        Welcome to Organizr
+    </h1>
+
+    <br>
+
+    <div class="card mb-3">
+        <img class="card-img-top"
+             src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_Green.png">
+        <div class="card-body" style="background-color: #fafafa">
+            <h5 class="card-title">Take control of your music!</h5>
+            <p class="card-text">Login with your spotify credentials to begin &nbsp;
+            <a class="btn btn-primary" href="{% url 'account' %} " role="button">Login</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="card-group">
+        <div class="card" style="width: 18rem;">
+            {#            <img class = "card-img-top" src = "https://image.freepik.com/free-vector/banner-smart-watch-with-physical-health-indicators_82574-6250.jpg">#}
+            <div class="card-body">
+                <h5 class="card-title">Manage Your Library</h5>
+                <p class="card-text">Take your Library and do what you want with it! Want to like all the tracks in your
+                    saved albums? That's possible! Want to delete all your saved tracks and start a new? We can do that
+                    too.</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            {#            <img class = "card-img-top" src = "https://image.freepik.com/free-vector/banner-smart-watch-with-physical-health-indicators_82574-6250.jpg">#}
+            <div class="card-body">
+                <h5 class="card-title">Spotify Wrapped</h5>
+                <p class="card-text">Bring Wrapped to anytime of the year and view all the songs you love and listen to
+                    the most.</p>
+            </div>
+        </div>
+        {#        <div class = "card" style = "width: 18rem;">#}
+        {#            <img class = "card-img-top" src = "https://i.pinimg.com/originals/24/a7/9a/24a79a561e11c22ad4ed03299420402e.jpg">#}
+        {#            <div class = "card-body">#}
+        {#                <h5 class = "card-title">Live Healthy and Happy</h5>#}
+        {#                <p class = "card-text">Manage stress and sleep better with simple routines curated for you. Jumpstart your journey to get motivated.</p>#}
+        {#            </div>#}
+        {#        </div>#}
+        {#        <div class = "card" style = "width: 18rem;">#}
+        {#            <img class = "card-img-top" src = "https://thumbs.dreamstime.com/b/cartoon-gym-equipment-vector-illustration-155299333.jpg"> <br> <br>#}
+        {#            <div class = "card-body">#}
+        {#                <h5 class = "card-title">Begin your free trial today!</h5>#}
+        {#                <p class = "card-text">What are you waiting for? Join us and feel the experience of Brazillian Jiu Jitsu!</p>#}
+        {##}
+        {#            </div>#}
+        {#        </div>#}
+    </div>
+
+
+    <section class="col-md-3 col-sm-6 col-sm-offset-3 col-md-offset-0">
+        <span class="footer-subtitles subtitle-margin">Check Us Out</span>
+        <div class="inline-icon-social">
+            <a href="//www.facebook.com" class="fa fa-facebook-official fb-icon"> </a>
+            <a href="//www.twitter.com"><i class="fa fa-twitter-square" style="color: #55ACEE"></i></a>
+            <a href="//www.instagram.com"><i class="fa fa-instagram" style="color: #e95950"></i></a>
+            <a href="//www.youtube.com"><i class="fa fa-youtube-play" style="color: #FF0000"></i></a>
+        </div>
+    </section>
+
+
+{#    <div class="img-cont">#}
+{#        <img class="footer24-image" src="https://avatars.githubusercontent.com/u/12554859?s=400&v=4" width=50,#}
+{#             height=50>#}
+{#    </div>#}
+    <div class="copyright">
+        <p>© <span data-current-year="">2021</span> Organizr, LLC. All rights reserved.</p>
+    </div>
+
+    </body>
+
+
+
+{% endblock content %}
